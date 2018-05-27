@@ -1,0 +1,71 @@
+<!--index.wxml-->
+<view class="container">
+	<!-- 顶部搜索栏 -->
+	<view class="section searchBar">
+		<view class="section searBar-box {{isTap?'tap':''}}">
+			<image src="../../assets/icons/search.png" mode="aspectFill" class="search-icon" />
+			<input type="button" name="searchBar" disabled="true" placeholder="搜索商品" placeholder-class="search-plac" bindtap="toSearch"
+			/>
+		</view>
+	</view>
+	<!-- end-section search searchBar -->
+
+	<!-- 首页轮播图 -->
+	<view class="section section-swiper">
+		<swiper class="slide" indicator-dots="{{indicator_dots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+			<block wx:for="{{index_slides}}" wx:key="{{index}}">
+				<swiper-item>
+					<image src="{{item.slide_url}}" mode="widthFix" class="slide-image" data-id="{{item.id}}" />
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<!-- end-section section-swiper -->
+
+	<!-- 商品导航分类 -->
+	<view class="section navBar">
+		<view class="section nav-list" wx:for="{{nav_data}}" wx:key="index">
+			<navigator>
+				<view class="nav-item">
+					<image src="{{item.nav_img}}" class="item-img" />
+					<text class="item-text">{{item.nav_title}}</text>
+				</view>
+			</navigator>
+		</view>
+	</view>
+	<!-- end-section navBar -->
+	<!-- 商品活动块 -->
+	<view class="section activity">
+		<view class="activity up">
+			<view class="left-list">
+				<image src="{{index_activity[0].img_url}}" data-id="{{index_activity[0].id}}" />
+			</view>
+			<view class="right-list">
+				<image src="{{index_activity[1].img_url}}" data-id="{{index_activity[1].id}}" mode="aspectFill" />
+				<image src="{{index_activity[2].img_url}}" data-id="{{index_activity[2].id}}" mode="aspectFill" />
+			</view>
+		</view>
+		<view class="activity down"></view>
+	</view>
+	<!-- end-section activity -->
+
+	<!-- 首页商品版块 -->
+	<view class="section block">
+		<block wx:for="{{index_block}}" wx:key="{{item.id}}">
+			<view class="section cover">
+				<image class="cover-img" src="{{item.img_url}}" data-cid="{{item.id}}" bindtap="showcDetail"/>
+			</view>
+			<view class="section goods-list">
+				<block wx:for="{{item.section}}" wx:key="index" wx:for-item="product">
+					<view class="goods-item">
+						<image class="goods-img {{product.is_new?'new':''}}" src="{{product.goods_cover}}" data-pid="{{product.id}}" mode="aspectFill" bindtap="showDetail"/>
+						<text class="title">{{product.header}}</text>
+						<text class="desp">{{product.description}}</text>
+						<text class="meta">{{product.meta}}</text>
+						<text class="discount">{{product.discount}}</text>
+					</view>
+				</block>
+			</view>
+		</block>
+	</view>
+</view>

@@ -1,0 +1,40 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/categories/categories",
+        "pages/discovery/discovery",
+        "pages/search/search"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ff6700",
+        "navigationBarTitleText": "小米商城",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "selectedColor": "#ff6700",
+        "borderStyle": "white",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "text": "首页",
+                "pagePath": "pages/index/index",
+                "iconPath": "assets/icons/home.png",
+                "selectedIconPath": "assets/icons/home_active.png"
+            },
+            {
+                "text": "分类",
+                "pagePath": "pages/categories/categories",
+                "iconPath": "assets/icons/category.png",
+                "selectedIconPath": "assets/icons/category_active.png"
+            },
+            {
+                "text": "发现",
+                "pagePath": "pages/discovery/discovery",
+                "iconPath": "assets/icons/discovery.png",
+                "selectedIconPath": "assets/icons/discovery_active.png"
+            }
+        ]
+    }
+}

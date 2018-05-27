@@ -1,0 +1,12 @@
+/**app.wxss**/
+page{
+  background: #ebebeb;
+  -webkit-font-smoothing: antialiased;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%; 
+  box-sizing: border-box;
+} 
