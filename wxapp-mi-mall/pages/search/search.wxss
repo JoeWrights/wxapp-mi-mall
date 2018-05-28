@@ -1,1 +1,25 @@
 /* pages/search/search.wxss */
+.weui-search-bar{
+    background: #ff6700;
+}
+.weui-search-bar__cancel-btn{
+    color: #fff;
+    font-size: 12pt;
+}
+
+.search-tages{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.search-tages text{
+    display: inline-block;
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 10pt;
+    padding: 0 10rpx;
+    margin: 30rpx 0 0 10rpx;
+    background: #fff;
+    border: 1rpx solid #d6d6d6;
+}

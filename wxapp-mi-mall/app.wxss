@@ -1,4 +1,5 @@
 /**app.wxss**/
+@import "./lib/weui.wxss";
 page{
   background: #ebebeb;
   -webkit-font-smoothing: antialiased;

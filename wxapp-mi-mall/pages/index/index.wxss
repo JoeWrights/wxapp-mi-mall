@@ -148,8 +148,10 @@
   margin-top: 8rpx;
 }
 .goods-item .goods-img{
+  position: relative;
   width: 360rpx;
   height: 360rpx;
+  box-shadow: 0 0 6rpx #dcdcdc;
 }
 
 .goods-img.new:before{      /*新品标签样式*/
@@ -163,6 +165,19 @@
   text-align: center;
   background: #8CC64A;
 }
+.goods-img.on-sale:before{   /*立减标签样式*/
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  content: "立减";
+  font-size: 9pt;
+  color: #fff;
+  text-align: center;
+  background: #ec6055;
+}
 .goods-item text{
   line-height: 40rpx;
   word-spacing: 10rpx;
@@ -175,6 +190,9 @@
   font-size: 11pt;
 }
 .goods-item .desp{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 9pt;
   color: #666;
 }
@@ -189,4 +207,16 @@
   font-size: 9pt;
   color: #666;
   text-decoration: line-through;
+}
+
+
+.bottom-line{
+  display: flex;
+  height: 100rpx;
+  justify-content: center;
+  align-items: center;
+}
+.bottom-line text{
+  font-size: 10pt;
+  color: #666;
 }

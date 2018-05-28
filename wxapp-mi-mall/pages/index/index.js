@@ -13,7 +13,7 @@ Page({
     index_activity:[],
     index_block:[],
     isTap:false,
-    
+    isLoading:false
   },
   onLoad(){
     const index_slides=app.globalData.index_slides;
@@ -24,11 +24,12 @@ Page({
       return section.section;
     })
     console.log(sectionList);
+    // onSalePrice=parseInt(discount.replace(/[^0-9]/ig,""))-parseInt(meta.replace(/[^0-9]/ig,""));
     this.setData({
       index_slides,
       nav_data,
       index_activity,
-      index_block
+      index_block,
     });
   },
   onShow(e){

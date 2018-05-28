@@ -1,4 +1,5 @@
 <!--index.wxml-->
+<import src="../../templates/loading.wxml"/>
 <view class="container">
 	<!-- 顶部搜索栏 -->
 	<view class="section searchBar">
@@ -7,9 +8,8 @@
 			<input type="button" name="searchBar" disabled="true" placeholder="搜索商品" placeholder-class="search-plac" bindtap="toSearch"
 			/>
 		</view>
-	</view>
-	<!-- end-section search searchBar -->
-
+	</view><!-- end-section search searchBar -->
+	
 	<!-- 首页轮播图 -->
 	<view class="section section-swiper">
 		<swiper class="slide" indicator-dots="{{indicator_dots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
@@ -19,8 +19,8 @@
 				</swiper-item>
 			</block>
 		</swiper>
-	</view>
-	<!-- end-section section-swiper -->
+	</view><!-- end-section section-swiper -->
+	
 
 	<!-- 商品导航分类 -->
 	<view class="section navBar">
@@ -32,8 +32,8 @@
 				</view>
 			</navigator>
 		</view>
-	</view>
-	<!-- end-section navBar -->
+	</view><!-- end-section navBar -->
+	
 	<!-- 商品活动块 -->
 	<view class="section activity">
 		<view class="activity up">
@@ -46,8 +46,8 @@
 			</view>
 		</view>
 		<view class="activity down"></view>
-	</view>
-	<!-- end-section activity -->
+	</view><!-- end-section activity -->
+	
 
 	<!-- 首页商品版块 -->
 	<view class="section block">
@@ -58,7 +58,7 @@
 			<view class="section goods-list">
 				<block wx:for="{{item.section}}" wx:key="index" wx:for-item="product">
 					<view class="goods-item">
-						<image class="goods-img {{product.is_new?'new':''}}" src="{{product.goods_cover}}" data-pid="{{product.id}}" mode="aspectFill" bindtap="showDetail"/>
+						<image class="goods-img {{product.is_new?'new':''}} {{product.on_sale?'on-sale':''}}" src="{{product.goods_cover}}" data-pid="{{product.id}}" mode="aspectFill" bindtap="showDetail"/>
 						<text class="title">{{product.header}}</text>
 						<text class="desp">{{product.description}}</text>
 						<text class="meta">{{product.meta}}</text>
@@ -67,5 +67,9 @@
 				</block>
 			</view>
 		</block>
+	</view><!-- end-section block -->
+	<template is="spinner" data="{{isLoading}}"/>
+	<view class="section bottom-line">
+		<text>到底啦</text>
 	</view>
 </view>
