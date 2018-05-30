@@ -1,0 +1,8 @@
+.section-swiper .slide{
+    width: 100%;
+    height: 380rpx;
+  }
+  .section-swiper .slide-image{
+    width: 100%;
+    display: block;
+  }

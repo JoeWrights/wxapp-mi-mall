@@ -1,0 +1,11 @@
+<template name="slide">
+    <view class="section section-swiper">
+		<swiper class="slide" indicator-dots="{{true}}" autoplay="{{true}}" interval="2000" duration="1000">
+			<block wx:for="{{slides}}" wx:key="{{index}}">
+				<swiper-item>
+					<image src="{{item.slide_url}}" mode="widthFix" class="slide-image" data-id="{{item.id}}" />
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+</template>
