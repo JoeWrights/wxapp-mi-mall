@@ -17,7 +17,7 @@ export default {
         }
     ],
     nav_data: [{
-            nav_urls: "",
+            nav_urls: "../phone/phone",
             nav_img: "../../assets/nav_img/phone.png",
             nav_title: "手机"
         },
@@ -397,5 +397,104 @@ export default {
                 }
             ]
         }
-    ]
+    ],
+    phone:{
+        phone_slides:[
+            {
+                id:3,
+                slide_url:"https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/f6503426aa32ed960b51475585013208.jpg?thumb=1&w=720&h=360"
+            },
+            {
+                id:2,
+                slide_url:"https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/9129d21aed81442ca895893ada045f6b.jpg?thumb=1&w=720&h=360"
+            }
+        ],
+        goods_list:[
+            {
+                id:4,
+                goods_cover:"https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/c0bd24d4f71813791c2987e4bf41696d.jpg?thumb=1&w=360&h=360",
+                header:"红米5A,轻巧长续航",
+                description:"高通骁龙处理器",
+                meta:"569元",
+                discount:"599元",
+                is_new:false,
+                on_sale:true,
+                prop:"500元-1000元"
+            },
+            {
+                id:5,
+                goods_cover:"https://i8.mifile.cn/v1/a1/e7853ea5-1260-6cb2-91ed-2c539a87db0a!360x360.webp",
+                header:"红米5,4GB+32GB",
+                description:"千元全面屏",
+                meta:"999元",
+                discount:"1099元",
+                is_new:false,
+                on_sale:true,
+                prop:"500元-1000元"
+            },
+            {
+                id:1,
+                goods_cover:"https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/850d316b25648c9862c7c22aefba9280.jpg?thumb=1&w=360&h=360",
+                header:"红米Note5,4GB+64GB",
+                description:"1.4μm大像素AI双摄",
+                meta:"1399元",
+                discount:"",
+                is_new:false,
+                prop:"1000元-2000元"
+            },
+            {
+                id:6,
+                goods_cover:"https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/8612f157af2c116b7e3fc47356cdb7be.jpg?thumb=1&w=360&h=360",
+                header:"红米自拍手机S2",
+                description:"1600万像素自拍手机",
+                meta:"999元",
+                discount:"",
+                is_new:true,
+                prop:"500元-1000元"
+            },
+            {
+                id:10,
+                goods_cover:"https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/bb34c2bb89ecd66885e2ac15e6278d71.jpg?thumb=1&w=360&h=360",
+                header:"红米Note5,6GB+64GB",
+                description:"1.4μm大像素AI双摄",
+                meta:"1699元",
+                discount:"",
+                is_new:false,
+                prop:"1000元-2000元"
+            },
+            {
+                id:9,
+                goods_cover:"https://i8.mifile.cn/v1/a1/7d04d143-a95c-0c1c-7c37-1ee23ae9906e!360x360.webp",
+                header:"小米MIX2 全陶瓷 黑色",
+                description:"Unibody 全陶瓷",
+                meta:"3699元",
+                discount:"4699元",
+                is_new:false,
+                on_sale:true,
+                prop:"3000元-4000元"
+            },
+            {
+                id:11,
+                goods_cover:"https://i8.mifile.cn/v1/a1/d5c8ea24-5290-46e0-8064-7634b4cbad70!360x360.webp",
+                header:"小米Max2 大屏大电量",
+                description:"6.44''大屏,5300mAh大电量",
+                meta:"1299元",
+                discount:"1399元",
+                is_new:false,
+                on_sale:true,
+                prop:"1000元-2000元"
+            },
+            {
+                id:12,
+                goods_cover:"https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/53d32c5e55cba00b473b48908c571f02.jpg?thumb=1&w=360&h=360",
+                header:"小米MIX 2S",
+                description:"骁龙845旗舰处理器,AI双摄",
+                meta:"3299元",
+                discount:"",
+                is_new:false,
+                on_sale:false,
+                prop:"3000元-4000元"
+            }
+        ]
+    }
 }
