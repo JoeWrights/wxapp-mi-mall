@@ -2,6 +2,11 @@
 .section{
   width: 100%;
 }
+::-webkit-scrollbar{    /*隐藏滚动条*/
+  height: 0;
+  width: 0;
+  color: transparent;
+}
 .searchBar{
   display: flex;
   justify-content: center;

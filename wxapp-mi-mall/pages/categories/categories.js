@@ -1,4 +1,6 @@
 // pages/categories/categories.js
+const app=getApp();
+
 Page({
 
   /**
@@ -6,45 +8,50 @@ Page({
    */
   data: {
     cate_nav_list:[
-      {name:"新品",id:100001},
-      {name:"手机",id:100002},
-      {name:"电视",id:100003},
-      {name:"电脑",id:100004},
-      {name:"家电",id:100005},
-      {name:"路由",id:100006},
-      {name:"智能",id:100007},
-      {name:"儿童",id:100008},
-      {name:"灯具",id:100009},
-      {name:"电源",id:100010},
-      {name:"耳机",id:100011},
-      {name:"音箱",id:100012},
-      {name:"生活",id:100013},
-      {name:"服务",id:100014},
-      {name:"米粉卡",id:100015}
+      {name:"新品",id:"new"},
+      {name:"手机",id:"phone"},
+      {name:"电视",id:"tv"},
+      {name:"电脑",id:"laptop"},
+      {name:"家电",id:"appliance"},
+      {name:"路由",id:"router"},
+      {name:"智能",id:"smart"},
+      {name:"儿童",id:"kids"},
+      {name:"灯具",id:"lignts"},
+      {name:"电源",id:"adapter"},
+      {name:"耳机",id:"headset"},
+      {name:"音箱",id:"voicebox"},
+      {name:"生活",id:"life"},
+      {name:"服务",id:"service"},
+      {name:"米粉卡",id:"card"}
     ],
     curIndex:0,
-    toShow:100001
+    toView:"new",
+    detail:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   switchCategory(e){
+    // console.log(e.currentTarget.dataset.id);
     const curIndex=e.currentTarget.dataset.index?e.currentTarget.dataset.index:0;
     this.setData({
-      toShow:e.currentTarget.dataset.id,
+      toView:e.currentTarget.dataset.id,
       curIndex
     });
   },
   onLoad: function (options) {
-  
+    const detail=app.globalData.category;
+    this.setData({
+      detail
+    });
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    
   },
 
   /**

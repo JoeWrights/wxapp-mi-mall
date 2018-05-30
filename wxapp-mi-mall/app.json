@@ -4,7 +4,9 @@
         "pages/logs/logs",
         "pages/categories/categories",
         "pages/discovery/discovery",
-        "pages/search/search"
+        "pages/search/search",
+        "pages/cart/cart",
+        "pages/mine/mine"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -34,6 +36,18 @@
                 "pagePath": "pages/discovery/discovery",
                 "iconPath": "assets/icons/discovery.png",
                 "selectedIconPath": "assets/icons/discovery_active.png"
+            },
+            {
+                "text": "购物车",
+                "pagePath": "pages/cart/cart",
+                "iconPath": "assets/icons/cart.png",
+                "selectedIconPath": "assets/icons/cart_active.png"
+            },
+            {
+                "text": "我的",
+                "pagePath": "pages/mine/mine",
+                "iconPath": "assets/icons/mine.png",
+                "selectedIconPath": "assets/icons/mine_active.png"
             }
         ]
     }
