@@ -1,0 +1,5 @@
+/* pages/phone/phone.wxss */
+@import "../../../templates/slide/slide.wxss";
+@import "../../../templates/goods_list/goods_list.wxss";
+
+
