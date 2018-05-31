@@ -17,12 +17,12 @@ export default {
         }
     ],
     nav_data: [{
-            nav_urls: "../phone/phone",
+            nav_urls: "../channel/phone/phone",
             nav_img: "../../assets/nav_img/phone.png",
             nav_title: "手机"
         },
         {
-            nav_urls: "",
+            nav_urls: "../channel/tv/tv",
             nav_img: "../../assets/nav_img/tv.png",
             nav_title: "电视"
         },
@@ -494,6 +494,64 @@ export default {
                 is_new:false,
                 on_sale:false,
                 prop:"3000元-4000元"
+            }
+        ]
+    },
+    tv:{
+        tv_slides:[
+            {
+                id:32,
+                slide_url:"https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/10604493bd0a6ee1c199d3de719fe2b9.jpg?thumb=1&w=720&h=360"
+            },
+            {
+                id:33,
+                slide_url:"https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/1278e5f5a95b65dc691e5828dd07c37b.jpg?thumb=1&w=720&h=360"
+            }
+        ],
+        goods_list:[
+            {
+                id:33,
+                goods_cover:"https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/1ead740b0b821cc3fe5f9f8161cc4fa3.jpg?thumb=1&w=360&h=360",
+                header:"55''电视4s曲面",
+                description:"4K曲面屏，金属机身",
+                meta:"3299元",
+                discount:"",
+                is_new:true,
+                on_sale:false,
+                prop:"55寸"
+            },
+            {
+                id:34,
+                goods_cover:"https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/1dc556d954f0bf0961cb292168e48470.jpg?thumb=1&w=360&h=360",
+                header:"小米电视4X 55英寸",
+                description:"4K HDR,人工智能语言",
+                meta:"2499元",
+                discount:"2799元",
+                is_new:true,
+                on_sale:true,
+                prop:"55寸"
+            },
+            {
+                id:35,
+                goods_cover:"https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/1ead740b0b821cc3fe5f9f8161cc4fa3.jpg?thumb=1&w=360&h=360",
+                header:"55''电视4s曲面",
+                description:"4K曲面屏，金属机身",
+                meta:"3299元",
+                discount:"",
+                is_new:true,
+                on_sale:false,
+                prop:"55寸"
+            },
+            {
+                id:36,
+                goods_cover:"https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/1ead740b0b821cc3fe5f9f8161cc4fa3.jpg?thumb=1&w=360&h=360",
+                header:"55''电视4s曲面",
+                description:"4K曲面屏，金属机身",
+                meta:"3299元",
+                discount:"",
+                is_new:true,
+                on_sale:false,
+                prop:"55寸"
             }
         ]
     }
