@@ -1,0 +1,16 @@
+<template name="cover">
+     <view class="section cover" wx:for="{{cover}}" wx:key="index">
+        <image class="cate-title" src="{{item.cover_title}}"/>
+        <view class="cover-list" wx:for="{{item.cover_list}}" wx:for-item="coverList" wx:key="{{index}}">
+            <view class="cover-item">
+                <image src="{{coverList.cover_img}}" data-pid="{{coverList.id}}" bindtap="showDetail"/>
+                <view class="item-desp">
+                    <text class="title">{{coverList.header}}</text>
+                    <text class="meta">{{coverList.meta}}</text>
+                    <text class="desp">{{coverList.description}}</text>
+                    <text class="discount">{{coverList.discount}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

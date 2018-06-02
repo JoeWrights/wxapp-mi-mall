@@ -3,7 +3,7 @@
         <block wx:for="{{goods_list}}" wx:key="index" wx:for-item="product">
             <view class="goods-item">
                 <image class="goods-img {{product.is_new?'new':''}} {{product.on_sale?'on-sale':''}}" src="{{product.goods_cover}}" data-pid="{{product.id}}"
-                    mode="aspectFill" bindtap="showDetail" />
+                    mode="aspectFill" bindtap="showDetail"/>
                 <text class="title">{{product.header}}</text>
                 <text class="desp">{{product.description}}</text>
                 <text class="meta">{{product.meta}}</text>
@@ -12,3 +12,15 @@
         </block>
     </view>
 </template>
+<!-- <template name="goods_list">
+    
+            <view class="goods-item">
+                <image class="goods-img {{is_new?'new':''}} {{on_sale?'on-sale':''}}" src="{{goods_cover}}" data-pid="{{id}}"
+                    mode="aspectFill" bindtap="showDetail" />
+                <text class="title">{{header}}</text>
+                <text class="desp">{{description}}</text>
+                <text class="meta">{{meta}}</text>
+                <text class="discount">{{discount}}</text>
+            </view>
+    
+</template> -->
