@@ -1,0 +1,5 @@
+/* pages/channel/computer/computer.wxss */
+
+@import "../../../templates/slide/slide.wxss";
+@import "../../../templates/goods_list/goods_list.wxss";
+@import "../../../templates/cover/cover.wxss";
