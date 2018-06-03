@@ -1,0 +1,161 @@
+/* pages/goods/show.wxss */
+
+.goods-swiper .slide {
+  width: 100%;
+  height: 792rpx;
+}
+
+.goods-swiper .slide-image {
+  width: 100%;
+  display: block;
+}
+
+.weui-cells:nth-child(1) {
+  margin-top: 0;
+}
+
+.weui-cell__bd view {
+  margin-top: 10rpx;
+}
+
+.weui-cell__bd .title {
+  margin-top: 0;
+  font-size: 12pt;
+}
+
+.weui-cell__bd .desp {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 9pt;
+  color: #666;
+}
+
+.weui-cell__bd .meta {
+  font-size: 12pt;
+  font-weight: bold;
+  color: #ff4a00;
+}
+
+.select .weui-cell__bd {
+  padding: 30rpx 14rpx;
+}
+
+.weui-cells.select {
+  margin-top: 10rpx;
+}
+
+.weui-cell__bd.on-sale text {
+  display: inline-block;
+  margin-left: 30rpx;
+  font-size: 10pt;
+}
+
+.weui-cell__bd.selected {
+  padding: 14rpx;
+}
+
+.weui-cell__bd.selected text {
+  display: inline-block;
+  margin-left: 30rpx;
+  font-size: 11pt;
+}
+
+.weui-cell__bd.selected text:nth-child(1) {
+  margin-left: 0;
+}
+
+.weui-cell__subtitle,
+.weui_cell__num {
+  font-size: 10pt;
+  color: #9c9c9c;
+}
+
+.weui-cell_promise {
+  padding: 10rpx 36rpx;
+}
+
+.weui-cell__bd.intro {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 9pt;
+}
+
+.weui-cell__hd.success image {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+
+.user-operation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  z-index: 2;
+  border-top: 1px solid #efefef;
+}
+
+.cart {
+  flex: 1;
+  height: 100rpx;
+  background: #fff;
+}
+
+.cart image {
+  width: 60rpx;
+  height: 60rpx;
+  position: relative;
+  top: 18rpx;
+  left: 20rpx;
+}
+.add-cart,
+.btn-buy-now {
+  flex: 3;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  background: #ff6700;
+}
+
+.btn-buy-now {
+  background: #ea5f39;
+}
+
+.goods-intro .tab-select{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80rpx;
+  margin-top: 14rpx;
+  background: #fff;
+}
+.brief,.parameter{
+  flex: 1;
+  font-size: 10pt;
+  text-align: center;
+}
+.tab-select text{
+  padding: 16rpx;
+}
+.on{
+  color: #ff6700;
+  border-bottom: 2px solid #ff6700;
+}
+.goods-intro image{
+  display: block;
+  width: 100%;
+}
+.parameter-info,.brief-info{
+  display: none;
+}
+.show{
+  display: block;
+}
