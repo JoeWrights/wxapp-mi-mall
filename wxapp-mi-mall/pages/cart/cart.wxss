@@ -1,1 +1,29 @@
 /* pages/cart/cart.wxss */
+.empty-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.empty-cart .cart-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 190rpx;
+    height: 190rpx;
+    margin-top: 100rpx;
+    border-radius: 50%;
+    background: #d6d6d6;
+}
+.cart-icon image{
+    width: 80rpx;
+    height: 80rpx;
+}
+.btn-warn,.prompt{
+    margin-top: 80rpx;
+}
+.btn-warn{
+    width: 580rpx;
+    letter-spacing: 4rpx;
+}
+

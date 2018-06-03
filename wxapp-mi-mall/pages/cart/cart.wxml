@@ -1,2 +1,8 @@
 <!--pages/cart/cart.wxml-->
-<text>pages/cart/cart.wxml</text>
+<view class="empty-cart">
+    <view class="cart-icon">
+        <image src="../../assets/icons/cart_empty.png" mode="aspectFill"/>
+    </view>
+    <view class="prompt">购物车还是空的</view>
+    <button type="warn" class="btn-warn" style="background: #ff6700;" bindtap="goIndex">到小米商城逛逛</button>
+</view>
