@@ -27,3 +27,70 @@
     letter-spacing: 4rpx;
 }
 
+/*购物车结算操作*/
+.user-operation{
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+.select-all,.total-price,.btn-primary.pay{
+    flex: 1;
+    font-size: 12pt;
+    text-align: center;
+}
+
+.select-all icon{
+    position: absolute;
+    left: 30rpx;
+    top: 20rpx;
+}
+.total-price text{
+    font-size: 12pt;
+    padding: 20rpx;
+    color: #ff6700;
+}
+.btn-primary.pay{
+    flex: 1;
+    font-size: 14pt;
+    color: #fff;
+    background: #ff6700;
+}
+
+/*购物车列表样式*/
+.cart-box{
+    width: 100%;
+    margin-top: 12rpx;
+    background: #fff;
+}
+.cart-list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cart-item{
+    height: 150rpx;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 11pt;
+    border-top: 1rpx solid #dcdcdc;
+}
+.cart-item .item-price{
+    color: #ff6700;
+}
+.cart-list image{
+    width: 100rpx;
+    height: 100rpx;
+    display: inline-block;
+}

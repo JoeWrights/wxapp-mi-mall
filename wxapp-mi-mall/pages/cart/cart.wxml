@@ -1,8 +1,47 @@
 <!--pages/cart/cart.wxml-->
-<view class="empty-cart">
-    <view class="cart-icon">
-        <image src="../../assets/icons/cart_empty.png" mode="aspectFill"/>
+<view wx:if="{{cart_list==''}}">
+    <view class="empty-cart">
+        <view class="cart-icon">
+            <image src="../../assets/icons/cart_empty.png" mode="aspectFill" />
+        </view>
+        <view class="prompt">购物车还是空的</view>
+        <button type="warn" class="btn-warn" style="background: #ff6700;" bindtap="goIndex">到小米商城逛逛</button>
     </view>
-    <view class="prompt">购物车还是空的</view>
-    <button type="warn" class="btn-warn" style="background: #ff6700;" bindtap="goIndex">到小米商城逛逛</button>
+</view>
+<view wx:else>
+    <!-- {{select_version}}
+    {{select_color}}
+    {{select_num}} -->
+    <view class="cart-box">
+        <!-- <view class="cart-list">
+            <view class="cart-item">
+                <icon type="circle" class="" color="#ff6700" size="20" />
+                <image src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/850d316b25648c9862c7c22aefba9280.jpg?thumb=1&w=360&h=360"
+                    mode="aspectFill" />
+                <text class="item-title">红米Note5 4+64GB 魔力蓝</text>
+                <text class="item-num">1×</text>
+                <text class="item-price">2799元</text>
+            </view>
+        </view> -->
+        <view class="cart-list" wx:for="{{cart_list}}" wx:key="{{index}}">
+            <view class="cart-item">
+                <icon type="circle" class="" color="#ff6700" size="20" />
+                <image src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/850d316b25648c9862c7c22aefba9280.jpg?thumb=1&w=360&h=360"
+                    mode="aspectFill" />
+                <text class="item-title">{{item.goods_name}} {{item.memory}}</text>
+                <text class="item-num">{{item.color}}</text>
+                <text class="item-price">{{item.select_num}}×</text>
+                <text class="item-price">{{item.price}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="user-operation">
+        <view class="select-all">
+            <icon type="circle" class="" color="#ff6700" size="20" />全选
+        </view>
+        <view class="total-price">合计：
+            <text>3999元</text>
+        </view>
+        <view class="btn-primary pay">结算</view>
+    </view>
 </view>
