@@ -45,10 +45,20 @@
   margin-top: 10rpx;
 }
 
-.weui-cell__bd.on-sale text {
+.on-sale text{
   display: inline-block;
+  margin-left: 10rpx;
+  font-size: 11pt;
+}
+.on-sale text:first-child{
   margin-left: 30rpx;
-  font-size: 10pt;
+}
+.on-sale text:nth-child(2){
+  margin-left: 40rpx;
+  padding: 0 20rpx;
+  color: #ff6700;
+  border: 1px solid #ff6700;
+  border-radius: 4rpx;
 }
 
 .weui-cell__bd.selected {
@@ -113,6 +123,21 @@
   position: relative;
   top: 18rpx;
   left: 20rpx;
+}
+.cart .badge{
+  display: inline-block;
+  width: 36rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  position: absolute;
+  top: 10rpx;
+  left: 60rpx;
+  font-size: 11px;
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+  background: #ff4a00;
+  border-radius: 50%;
 }
 .add-cart,
 .btn-buy-now {

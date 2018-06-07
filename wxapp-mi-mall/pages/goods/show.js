@@ -9,7 +9,10 @@ Page({
   data: {
     goods:[],
     selected:true,
-    selected1:false
+    selected1:false,
+    // version:"",
+    // color:"",
+    goods_num:"" 
   },
   selectBrief(e){
     this.setData({
@@ -22,6 +25,33 @@ Page({
       selected:false,
       selected1:true
     });
+  },
+  //点击加入购物车按钮跳到商品属性选择页面
+  toSelect(e){
+    const id=e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url:`../selectGoods/selectGoods?id=${id}`
+    });
+  },
+  goCart(){
+    wx.switchTab({
+      url: "../cart/cart"
+    })
+  },
+  previewImage(e){
+    const index=e.currentTarget.dataset.index;	//获取swiper里的图片的下标
+		// const slideName=e.currentTarget.dataset.slides;
+		// console.log(slideName);
+		const slide=this.data.goods.goods_slides; //获取商品轮播图
+    const imgList=[]; //定义一个数组来存放轮播图的url
+    // console.log(slide);
+		slide.map(item=>{
+      imgList.push(item.slide_url);
+    });
+		wx.previewImage({
+			current: imgList[index], // 当前显示图片的链接，不填则默认为 urls 的第一张
+			urls: imgList
+		})
   },
   /**
    * 生命周期函数--监听页面加载
@@ -51,8 +81,16 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
+  //把用户选好的商品规格从缓存拿出来
   onShow: function () {
-  
+    // const version=wx.getStorageSync("version");
+    // const color=wx.getStorageSync("color");
+    const goods_num=wx.getStorageSync('goods_sum');
+    this.setData({
+      // version,
+      // color,
+      goods_num
+    });
   },
 
   /**

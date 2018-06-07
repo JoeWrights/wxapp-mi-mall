@@ -1,17 +1,10 @@
 <!--pages/goods/show.wxml-->
 <view class="section goods-show">
-    <view class="user-operation">
-        <view class="cart">
-            <image src="../../assets/icons/cart.png" />
-        </view>
-        <view class="add-cart">加入购物车</view>
-        <view class="btn-buy-now">立即购买</view>
-    </view>
     <view class="goods-swiper">
         <swiper class="slide" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
             <block wx:for="{{goods.goods_slides}}" wx:key="{{index}}">
                 <swiper-item>
-                    <image src="{{item.slide_url}}" mode="widthFix" class="slide-image" data-id="{{item.id}}" />
+                    <image src="{{item.slide_url}}" mode="widthFix" class="slide-image" data-id="{{item.id}}" bindtap="previewImage"/>
                 </swiper-item>
             </block>
         </swiper>
@@ -33,17 +26,14 @@
                 <text class="weui-cell__strong">赠品</text>
                 <text>赠米粉卡</text>
             </view>
-            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="../selectGoods/selectGoods">
+            <navigator class="weui-cell weui-cell_access" hover-class="none" url="../selectGoods/selectGoods?id={{goods.id}}">
                 <view class="weui-cell__bd selected">
                     <text class="weui-cell__subtitle">已选</text>
-                    <text>{{goods.selected}}</text>
-                    <text class="weui_cell__num">×1</text>
+                    <text>{{goods.header}} {{goods.default[0]}} {{goods.default[1]}}</text>
+                    <text class="weui_cell__num">×{{goods.default[2]}}</text>
                 </view>
                 <view class="weui-cell__ft  weui-cell__ft_in-access"></view>
             </navigator>
-            <!-- <view class="weui-cell__hd success">
-                <image src="../../assets/icons/success.png"/>
-            </view> -->
             <view class="weui-cell weui-cell_promise">
                 <view class="weui-cell__hd success">
                     <image src="../../assets/icons/success.png" />
@@ -71,5 +61,14 @@
         <view class="parameter-info {{selected1?'show':''}}" wx:for="{{goods.parameter_img}}" wx:key="{{index}}">
             <image src="{{item}}" mode="widthFix"/>
         </view>
+    </view>
+    <view class="user-operation">
+        <view class="cart" bindtap="goCart">
+            <!-- <view ></view> -->
+            <text class="badge" wx:if="{{goods_num>0}}">{{goods_num}}</text>
+            <image src="../../assets/icons/cart.png" />
+        </view>
+        <view class="add-cart" bindtap="toSelect" data-id="{{goods.id}}">加入购物车</view>
+        <view class="btn-buy-now">立即购买</view>
     </view>
 </view>
