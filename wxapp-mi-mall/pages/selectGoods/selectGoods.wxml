@@ -1,0 +1,80 @@
+<!--pages/selectGoods/selectGoods.wxml-->
+<view class="section goods-select">
+    <block wx:for="{{goods_attrSelect}}" wx:key="{{item.id}}">
+        <view class="weui-cells preview">
+            <view class="weui-cell">
+                <view class="weui-cell__hd head">
+                    <image src="{{item.goods_slides[0].slide_url}}" />
+                </view>
+                <view class="weui-cell__bd">
+                    <view class="title">{{item.header}} {{memory}} {{color}}</view>
+                    <view class="meta">{{price}}</view>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd on-sale">
+                    <text class="subtitle">促销</text>
+                    <text class="gift">赠品</text>
+                    <text>赠米粉卡</text>
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-cells">
+            <view class="weui-cell attr-version">
+                <view class="weui-cell__hd subtitle">
+                    版本
+                </view>
+                <view class="weui-cell__bd">
+                    <radio-group class="select-version" bindchange="selectVersion">
+                        <block wx:for="{{item.attr_list.version}}" wx:for-item="version" wx:key="{{index}}">
+                            <label class="{{index==curvIndex?'on':''}}" data-index="{{index}}" bindtap="versionHasSelected">
+                                <radio class="weui-check" value="{{version.value[0]}},{{version.value[1]}}" />
+                                <view class="weui-check__label">
+                                    <text>{{version.value[0]}}</text>
+                                </view>
+                                <view class="weui-check__label">
+                                    <text>{{version.value[1]}}</text>
+                                </view>
+                            </label>
+                        </block>
+                    </radio-group>
+                </view>
+            </view>
+            <view class="weui-cell attr-color">
+                <view class="weui-cell__hd subtitle">
+                    颜色
+                </view>
+                <view class="weui-cell__bd">
+
+                    <radio-group class="select-color" bindchange="selectColor">
+                        <block wx:for="{{item.attr_list.color}}" wx:for-item="color" wx:key="{{index}}">
+                            <label class="{{index==curcIndex?'on':''}}" data-index="{{index}}" bindtap="colorHasSelected">
+                                <radio class="weui-check" value="{{color.value}}"/>
+                                <view class="weui-check__label">
+                                    <text>{{color.value}}</text>
+                                </view>
+                            </label>
+                        </block>
+                    </radio-group>
+
+                </view>
+            </view>
+            <view class="weui-cell attr-number">
+                <view class="weui-cell__hd subtitle">购买数量</view>
+                <view class="weui-cell__bd">
+                    <view class="select-number">
+                        <view class="minus" bindtap="minusCount">
+                            <image src="../../assets/icons/minus.png" />
+                        </view>
+                        <view class="number">{{select_num?select_num:1}}</view>
+                        <view class="add" bindtap="addCount">
+                            <image src="../../assets/icons/add.png" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <view class="btn-primary" bindtap="submit">确定</view>
+</view>
