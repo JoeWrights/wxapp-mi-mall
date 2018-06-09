@@ -13,34 +13,41 @@
     {{select_color}}
     {{select_num}} -->
     <view class="cart-box">
-        <!-- <view class="cart-list">
-            <view class="cart-item">
-                <icon type="circle" class="" color="#ff6700" size="20" />
-                <image src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/850d316b25648c9862c7c22aefba9280.jpg?thumb=1&w=360&h=360"
-                    mode="aspectFill" />
-                <text class="item-title">红米Note5 4+64GB 魔力蓝</text>
-                <text class="item-num">1×</text>
-                <text class="item-price">2799元</text>
-            </view>
-        </view> -->
         <view class="cart-list" wx:for="{{cart_list}}" wx:key="{{index}}">
-            <view class="cart-item">
-                <icon type="circle" class="" color="#ff6700" size="20" />
-                <image src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/850d316b25648c9862c7c22aefba9280.jpg?thumb=1&w=360&h=360"
-                    mode="aspectFill" />
-                <text class="item-title">{{item.goods_name}} {{item.memory}}</text>
-                <text class="item-num">{{item.color}}</text>
-                <text class="item-price">{{item.select_num}}×</text>
-                <text class="item-price">{{item.price}}</text>
+            <view class="cart-item {{item.isTouchMove? 'touch-move-active': ''}}" bindtouchstart="touchstart" bindtouchmove="touchmove" data-index="{{index}}">
+                <view class="cart-content">
+                    <icon type="{{item.selected?'success':'circle'}}" class="" color="#ff6700" size="20" bindtap="selectList" data-index="{{index}}"
+                    />
+                    <image src="{{item.cover}}"
+                        mode="aspectFill" />
+                    <text class="item-title">{{item.goods_name}} {{item.memory}}</text>
+                    <text class="item-num">{{item.color}}</text>
+                    <text class="item-price">{{item.select_num}}×</text>
+                    <text class="item-price">{{item.price}}</text>
+                    <view class="del-cart-item" catchtap="delCartItem">删除</view>
+                </view>
+                <!-- <view class="cart-content">
+                    <icon type="{{item.selected?'success':'circle'}}" class="" color="#ff6700" size="20" bindtap="selectList" data-index="{{index}}"
+                    />
+                    <image src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/850d316b25648c9862c7c22aefba9280.jpg?thumb=1&w=360&h=360"
+                        mode="aspectFill" />
+                    <text class="item-title">红米5A 2GB+16GB</text>
+                    <text class="item-num">红色</text>
+                    <text class="item-price">2×</text>
+                    <text class="item-price">599元</text>
+                    <view class="del">删除</view>
+                </view> -->
             </view>
         </view>
     </view>
     <view class="user-operation">
         <view class="select-all">
-            <icon type="circle" class="" color="#ff6700" size="20" />全选
+            <icon wx:if="{{selectAllStatus}}" type="success" class="total-select" color="#ff6700" bindtap="selectAll" />
+            <icon wx:else type="circle" class="total-select" color="#ff6700" size="20" bindtap="selectAll" />
+            <text>全选</text>
         </view>
         <view class="total-price">合计：
-            <text>3999元</text>
+            <text>{{totalPrice}}元</text>
         </view>
         <view class="btn-primary pay">结算</view>
     </view>
