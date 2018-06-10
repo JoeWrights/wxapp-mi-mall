@@ -263,7 +263,38 @@ export default {
             ]
         }
     ],
-    category: [{
+    category: [
+        {
+            id: "new",
+            banner: "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/bb5cfaa54a1bf61c85539226f5049de1.jpg?thumb=1&w=500&h=200",
+            cate_name: "新品",
+            cate_list: [{
+                    item_img: "https://i8.mifile.cn/b2c-mimall-media/cae1e9af28aebb1d0e065cbdc08d8f66!120x120.png",
+                    item_name: "小米8"
+                },
+                {
+                    item_img: "https://i8.mifile.cn/b2c-mimall-media/745cd6cbffce6a1c1c1cafbd5abbfed0!120x120.png",
+                    item_name: "黑鲨游戏手机"
+                },
+                {
+                    item_img: "https://i8.mifile.cn/b2c-mimall-media/dc6165304dcced2a3b2cc574e4af9b4a!120x120.png",
+                    item_name: "小米8SE"
+                },
+                {
+                    item_img: "https://i8.mifile.cn/b2c-mimall-media/06cabb01bbe4ac5c819ee101e4446a16!120x120.png",
+                    item_name: "小米MIX2S"
+                },
+                {
+                    item_img: "https://i8.mifile.cn/b2c-mimall-media/95e18c104b398643101805287a00ad2b!120x120.png",
+                    item_name: "小米MIX2"
+                },
+                {
+                    item_img: "https://i8.mifile.cn/b2c-mimall-media/7bb843bdb8e1f61f4567f1e2acb43262!120x120.png",
+                    item_name: "小米Note3"
+                }
+            ]
+        },
+        {
             id: "phone",
             banner: "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/711275806886438be20e33ec943a904a.jpg?thumb=1&w=500&h=200",
             cate_name: "手机",
@@ -343,23 +374,31 @@ export default {
         },
         {
             id: "appliance",
-            banner: "https://i8.mifile.cn/v1/a1/efdcf401-f553-aef7-1751-43854b6f4a20!500x200.webp",
-            cate_name: "电脑",
+            banner: "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/17dbc837b82de528f8f4abf4ede0753a.jpg?thumb=1&w=500&h=200",
+            cate_name: "家电",
             cate_list: [{
-                    item_img: "https://i8.mifile.cn/b2c-mimall-media/ccad3ac9a43a21a606a392cf6a14b091!120x120.jpg",
-                    item_name: "游戏本"
+                    item_img: "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/a9370fface3457e13c0db169f650fa05.png?thumb=1&w=120&h=120",
+                    item_name: "电饭煲"
                 },
                 {
-                    item_img: "https://i8.mifile.cn/b2c-mimall-media/0643559b70964014c1d672cc783121d2!120x120.jpg",
-                    item_name: "笔记本15.6''"
+                    item_img: "https://i1.mifile.cn/v1/a1/T1hyAgB_VT1R4cSCrK!120x120.png",
+                    item_name: "净水器"
                 },
                 {
-                    item_img: "https://i8.mifile.cn/v1/a1/8a9485f0-3b11-9d50-cbaa-1ee1cc0936cd!120x120.png",
-                    item_name: "笔记本13.3''"
+                    item_img: "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/41c838f5587ef2e6d0a8e1a18a86bace.png?thumb=1&w=120&h=120",
+                    item_name: "净化器"
                 },
                 {
-                    item_img: "https://i8.mifile.cn/v1/a1/78e8a82a-1ef7-453b-5a07-d8394081ae2e!120x120.png",
-                    item_name: "笔记本12.5''"
+                    item_img: "https://i8.mifile.cn/v1/a1/101e2128-624d-ce9f-973f-50b868f8036a!120x120.png",
+                    item_name: "扫地机器人"
+                },
+                {
+                    item_img: "https://i8.mifile.cn/b2c-mimall-media/fcc4ecc8a1f9c02387b4bd3658d2dea0!120x120.jpg",
+                    item_name: "米家投影仪"
+                },
+                {
+                    item_img: "https://i8.mifile.cn/v1/a1/91cd8c44-11ca-79bd-429f-de882bdeaf3b!120x120.png",
+                    item_name: "电水壶"
                 }
             ]
         },
@@ -666,18 +705,18 @@ export default {
             header:"红米Note5",
             description:"骁龙636 八核处理器/1.4μm大像素AI双摄/1300万柔光自拍",
             meta:"1399元",
-            default:["4GB+64GB","黑色",1],
+            default:["4GB+64GB","黑色",1,"1399元"],
             attr_list:{
                 version:[
-                    {name:"3GB+32GB",value:["3GB+32GB","1099元"]},
                     {name:"4GB+64GB",value:["4GB+64GB","1399元"]},
+                    {name:"3GB+32GB",value:["3GB+32GB","1099元"]},
                     {name:"6GB+64GB",value:["6GB+64GB","1699元"]}
                 ],
                 color:[
-                    {name:"gold",value:"金色",checked:true},
-                    {name:"black",value:"黑色",checked:false},
-                    {name:"rosegold",value:"玫瑰金",checked:false},
-                    {name:"magicblue",value:"魔力蓝",checked:false}
+                    {name:"gold",value:"金色"},
+                    {name:"black",value:"黑色"},
+                    {name:"rosegold",value:"玫瑰金"},
+                    {name:"magicblue",value:"魔力蓝"}
                 ]
             },
             intro_img:[
@@ -715,11 +754,11 @@ export default {
             header:"红米5A",
             description:"8天超长待机/137g轻巧机身/高通骁龙处理器",
             meta:"599元",
-            default:["2GB+16GB","铂银灰",1],
+            default:["2GB+16GB","铂银灰",1,"599元"],
             attr_list:{
                 version:[
-                    {name:"3GB+32GB",value:["3GB+32GB","699元"]},
-                    {name:"2GB+16GB",value:["2GB+16GB","599元"]}
+                    {name:"2GB+16GB",value:["2GB+16GB","599元"]},
+                    {name:"3GB+32GB",value:["3GB+32GB","699元"]}
                 ],
                 color:[
                     {name:"grey",value:"铂银灰"},
@@ -757,13 +796,13 @@ export default {
                     slide_url:"https://i8.mifile.cn/v1/a1/60acd23a-cd84-700d-a7fe-6bb31e5ff71b!720x792.webp"
                 }
             ],
-            header: "红米5,4GB+32GB",
+            header: "红米5",
             description: "千元全面屏",
             meta: "999元",
-            default:["3GB+32GB","黑",1],
+            default:["4GB+32GB","黑",1,"899元"],
             attr_list:{
                 version:[
-                    {name:"4GB+32GB",value:["4GB+32GB","899元"]},
+                    {name:"4GB+32GB",value:["4GB+32GB","999元"]},
                     {name:"3GB+32GB",value:["3GB+32GB","799元"]},
                     {name:"2GB+16GB",value:["2GB+16GB","699元"]}
                 ],
@@ -807,10 +846,10 @@ export default {
             header: "红米自拍手机S2",
             description: "1600万像素自拍手机",
             meta: "999元",
-            default:["3GB+32GB","香槟金",1],
+            default:["4GB+32GB","香槟金",1,"999元"],
             attr_list:{
                 version:[
-                    {name:"4GB+32GB",value:["4GB+32GB","899元"]},
+                    {name:"4GB+32GB",value:["4GB+32GB","999元"]},
                     {name:"4GB+64GB",value:["4GB+64GB","1299元"]}
                 ],
                 color:[
@@ -848,10 +887,10 @@ export default {
                     slide_url:"https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/a5b5500ba1f1a1ed3eade6d83ccd64b4.jpg?thumb=1&w=720&h=792"
                 }
             ],
-            header: "小米5X变焦双摄",
+            header: "小米5X",
             description: "5.5''大屏轻薄全金属",
             meta: "1299元",
-            default:["4GB+32GB","香槟金",1],
+            default:["4GB+32GB","香槟金",1,"1299元"],
             attr_list:{
                 version:[
                     {name:"4GB+32GB",value:["4GB+32GB","1299元"]},
@@ -893,10 +932,10 @@ export default {
                     slide_url:"https://i8.mifile.cn/v1/a1/2aa2177d-6b9c-70d2-9d71-9bf5679e2eba!720x792.webp"
                 }
             ],
-            header: "小米MIX2 全陶瓷",
+            header: "小米MIX2 陶瓷",
             description: "Unibody 全陶瓷",
             meta: "3699元",
-            default:["6GB+128GB","黑色",1],
+            default:["6GB+64GB","黑色",1,"2599元"],
             attr_list:{
                 version:[
                     {name:"6GB+64GB",value:["6GB+64GB","2599元"]},
@@ -915,5 +954,67 @@ export default {
                 "https://i8.mifile.cn/v1/a1/0ba33fbe-65c9-424a-f1dc-ca219c89a224.jpg?w=1080&h=1623&s=123.5"
             ]
         }
-    ]
+    ],
+
+
+
+    discovery: [
+        {
+          header: '小米8，一部与众不同的手机',
+          description: "透明探索版，将科技与美学完美结合",
+          video: 'https://v.mifile.cn/b2c-mimall-media/ed921294fb62caf889d40502f5b38147.mp4',
+          image: "https://i1.mifile.cn/a4/xmad_15278351912522_frJQc.jpg",
+          duration_raw: 74
+        },
+        {
+          header: '小米MIX 2S，一面科技 一面艺术',
+          description: "艺术品般陶瓷机身，惊艳、璀璨",
+          video: 'https://v.mifile.cn/b2c-mimall-media/53fc775dd6b29ecd8df3e2ea35129766.mp4',
+          image: 'https://i1.mifile.cn/a4/xmad_15278359339164_dDTJC.jpg',
+          duration_raw: 75,
+        },
+        {
+          header: '天生丽质的小米6X',
+          description: "让你一见倾心",
+          video: 'https://v.mifile.cn/b2c-mimall-media/4c2ab855040d19a0680cb2064097a313.mp4',
+          image: 'https://i1.mifile.cn/a4/xmad_15278359181775_apkZK.jpg',
+          duration_raw: 63,
+        },
+        {
+          header: '生活中无所不在的小爱同学',
+          description: "一句话搞定手机复杂操作",
+          video: 'https://v.mifile.cn/b2c-mimall-media/69f7b9881f4ed7123f0d473dcd44d621.mp4',
+          image: 'https://i1.mifile.cn/a4/xmad_15278358912266_LDHfI.jpg',
+          duration_raw: 119,
+        },
+        {
+          header: '小米7年工艺探索之路',
+          description: "听雷总讲述小米7年工艺探索之路",
+          video: 'https://v.mifile.cn/b2c-mimall-media/dd431020c9e7bb06a89b6959fa91f97d.mp4',
+          image: 'https://i1.mifile.cn/a4/cms_14925886078012_gvjFI.jpg',
+          duration_raw: 168,
+        },
+        {
+          header: '小米接连斩获国际顶尖设计大奖',
+          description: "小米接连斩获国际顶尖设计大奖",
+          video: 'https://v.mifile.cn/b2c-mimall-media/226dcc759c574b2ddb4d3b1bb4b33de5.mp4',
+          image: 'https://i1.mifile.cn/a4/cms_14919861676287_BZesj.jpg',
+          duration_raw: 258,
+        },
+        {
+          
+          header: '米兔故事机，能讲故事还能微信互动',
+          description: "漂亮的米兔故事机，能讲故事还能微信互动",
+          video: 'https://v.mifile.cn/b2c-mimall-media/70ac74dc4a256364fa8e38bed37d4fb8.mp4',
+          image: 'https://i1.mifile.cn/a4/cms_14800668624625_HOUlf.jpg',
+          duration_raw: 118,
+        },
+        {
+          header: '菲利普·斯塔克的设计哲学',
+          description: "菲利普·斯塔克的设计哲学",
+          video: 'https://v.mifile.cn/b2c-mimall-media/0cba092e7b9b0460f5f294bb2fc8345b.mp4',
+          image: 'https://i1.mifile.cn/a4/cms_1478139217532_zibhc.jpg',
+          duration_raw: 199,
+        }
+      ]
 }
