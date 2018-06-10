@@ -23,6 +23,18 @@ Page({
         content:"请完善信息",
         showCancel:false
       }); 
+    }else if(!/^[1][3,4,5,7,8]\d{9}$/.test(mobile)){
+      wx.showModal({
+        title:"提示",
+        content:"手机号格式不规范",
+        showCancel:false
+      }); 
+    }else if(!/^[0-9]{6}$/.test(postCode)){
+      wx.showModal({
+        title:"提示",
+        content:"邮政编码不规范",
+        showCancel:false
+      }); 
     }else{
       this.data.isComplete=true;
       wx.setStorageSync('addrInfo', addrInfo);
@@ -47,19 +59,6 @@ Page({
   onLoad: function (options) {
     // let {receiverName,mobile,addressDetail,postCode}=addrInfo;
     // wx.setStorageSync('addrInfo', {receiverName,mobile,addressDetail,postCode});
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
     let addrInfo=wx.getStorageSync("addrInfo");
     console.log(addrInfo);
     let {receiverName,mobile,addressDetail,postCode}=addrInfo;
@@ -73,6 +72,20 @@ Page({
       isComplete:true,
       buttonTitle: "修改"
     });
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    
   },
 
   /**
