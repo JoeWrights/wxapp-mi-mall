@@ -1,2 +1,55 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="container">
+    <view class="weui-cells">
+        <view class="weui-cell">
+            <view class="weui-cell__hd head">
+                <image src="../../assets/icons/avatar.jpg"></image>
+            </view>
+            <view class="weui-cell__bd">
+                <view class="name">云中玉卷</view>
+                <view class="account" bindtap="bindAccount">
+                    绑定小米账号
+                </view>
+            </view>
+            <view class="weui-cell__ft">
+                <view class="qrCode">
+                    <image src="../../assets/icons/qrcode.png" />
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="weui-cells">
+        <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="/pages/score/score">
+            <view class="weui-cell__hd">
+                <image src="../../assets/icons/order.png" />
+            </view>
+            <view class="weui-cell__bd">我的订单</view>
+        </navigator>
+        <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="../addr/addr">
+            <view class="weui-cell__hd">
+                <image src="../../assets/icons/addr.png" />
+            </view>
+            <view class="weui-cell__bd">我的收货地址</view>
+        </navigator>
+        <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="/pages/account/account">
+            <view class="weui-cell__hd">
+                <image src="../../assets/icons/coupon.png" />
+            </view>
+            <view class="weui-cell__bd">我的优惠券</view>
+        </navigator>
+        <navigator url="/pages/electric/electric" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+                <image src="../../assets/icons/fcode.png" />
+            </view>
+            <view class="weui-cell__bd">我的F码</view>
+        </navigator>
+    </view>
+    <view class="weui-cells">
+        <navigator url="/pages/catalog/catalog" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+                <image src="../../assets/icons/setting.png" />
+            </view>
+            <view class="weui-cell__bd">设置</view>
+        </navigator>
+    </view>
+</view>

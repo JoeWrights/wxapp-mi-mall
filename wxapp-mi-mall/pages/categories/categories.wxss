@@ -16,11 +16,6 @@ page,.main{
     border-right: 1px solid #dcdcdc;
     text-align: center;
 }
-::-webkit-scrollbar{    /*隐藏滚动条*/
-    height: 0;
-    width: 0;
-    color: transparent;
-}
 .cate-name{
     display: inline-block;
     margin-top: 40rpx;

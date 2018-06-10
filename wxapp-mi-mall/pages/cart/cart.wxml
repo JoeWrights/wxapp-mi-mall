@@ -49,6 +49,6 @@
         <view class="total-price">合计：
             <text>{{totalPrice}}元</text>
         </view>
-        <view class="btn-primary pay">结算</view>
+        <view class="btn-primary pay" bindtap="checkOut">结算</view>
     </view>
 </view>

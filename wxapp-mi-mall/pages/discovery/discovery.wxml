@@ -1,2 +1,10 @@
 <!--pages/discovery/discovery.wxml-->
-<text>pages/discovery/discovery.wxml</text>
+<view class="cards">
+    <view class="card" hover-class="hover" wx:for="{{videos}}" wx:key="index">
+        <video src="{{item.video}}" poster="{{item.image}}" objectFit="cover" duration="{{item.duration_raw}}" />
+        <view class="content">
+            <view class="header">{{item.header}}</view>
+            <view class="description">{{item.description}}</view>
+        </view>
+    </view>
+</view>

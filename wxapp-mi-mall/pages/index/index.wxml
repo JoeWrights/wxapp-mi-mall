@@ -1,5 +1,4 @@
 <!--index.wxml-->
-<import src="../../templates/loading.wxml"/>
 <view class="container">
 	<!-- 顶部搜索栏 -->
 	<view class="section searchBar">
@@ -25,7 +24,7 @@
 	<!-- 商品导航分类 -->
 	<view class="section navBar">
 		<view class="section nav-list" wx:for="{{nav_data}}" wx:key="index">
-			<navigator>
+			<navigator url="{{item.nav_urls}}" hover-class="none">
 				<view class="nav-item">
 					<image src="{{item.nav_img}}" class="item-img" />
 					<text class="item-text">{{item.nav_title}}</text>
@@ -68,7 +67,6 @@
 			</view>
 		</block>
 	</view><!-- end-section block -->
-	<template is="spinner" data="{{isLoading}}"/>
 	<view class="section bottom-line">
 		<text>到底啦</text>
 	</view>

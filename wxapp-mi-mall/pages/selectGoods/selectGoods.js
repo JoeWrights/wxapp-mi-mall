@@ -11,6 +11,7 @@ Page({
     curvIndex: 0,
     select_num: 1,
     color:"",
+    cover_img:"",
     memory:"",
     price:""
   },
@@ -30,9 +31,13 @@ Page({
   },
   selectColor(e) {
     let color = e.detail.value;
+    let cover_img=this.data.goods_attrSelect[0].goods_slides[0].slide_url;
+    // console.log(cover_img);
     wx.setStorageSync('color', color);
+    wx.setStorageSync('cover', cover_img);
     this.setData({
-      color
+      color,
+      cover_img
     });
   },
   colorHasSelected(e) {
@@ -80,6 +85,7 @@ Page({
       'color': wx.getStorageSync('color'),
       // 'version': wx.getStorageSync('version'),
       'select_num': wx.getStorageSync('select_num'),
+      'cover': wx.getStorageSync('cover'),
       'selected': false,
       'isTouchMove': false
     }

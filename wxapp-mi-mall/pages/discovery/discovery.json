@@ -1,1 +1,6 @@
-{}
+{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小米商城",
+    "navigationBarTextStyle": "black"
+}

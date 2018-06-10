@@ -18,18 +18,6 @@
                         <image src="{{cateList.item_img}}" />
                         <text>{{cateList.item_name}}</text>
                     </view>
-                    <!-- <view class="cate-item">
-                        <image src="https://i8.mifile.cn/b2c-mimall-media/745cd6cbffce6a1c1c1cafbd5abbfed0!120x120.png" />
-                        <text>黑鲨游戏手机</text>
-                    </view>
-                    <view class="cate-item">
-                        <image src="https://i8.mifile.cn/b2c-mimall-media/74049580f582c72efdde7c80fbdbd223!120x120.jpg" />
-                        <text>红米S2</text>
-                    </view>
-                    <view class="cate-item">
-                        <image src="https://i8.mifile.cn/b2c-mimall-media/06cabb01bbe4ac5c819ee101e4446a16!120x120.png"/>
-                        <text>小米MIX2S</text>
-                    </view> -->
                 </view>
             </view>
             

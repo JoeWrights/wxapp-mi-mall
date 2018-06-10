@@ -1,1 +1,40 @@
 /* pages/mine/mine.wxss */
+.weui-cells {
+    margin-top: 18rpx;
+    font-size: 12pt;
+}
+.weui-cell.head {
+    padding: 8px 14px;
+}
+
+.weui-cell__hd.head image{
+    width: 120rpx;
+    height: 120rpx;
+    margin-right: 16px;
+    margin-left: 0;
+    vertical-align: middle;
+}
+
+.weui-cell__hd image {
+    width: 70rpx;
+    height: 70rpx;
+    margin-right: 18px;
+    margin-left: 5rpx;
+    vertical-align: middle;
+}
+.weui-cell__ft .qrCode image{
+    width: 60rpx;
+    height: 60rpx;
+}
+.weui-cell__bd .account{
+    width: 180rpx;
+    height: 46rpx;
+    line-height: 46rpx;
+    margin-top: 8rpx;
+    text-align: center;
+    font-size: 10pt;
+    color: #333;
+    background: #ebebeb;
+    border-radius: 6rpx;
+}
+

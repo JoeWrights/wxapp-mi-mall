@@ -1,24 +1,33 @@
 <!--pages/search/search.wxml-->
+<import src="../../templates/goods_list/goods_list.wxml" />
 <view class="weui-search-bar">
     <view class="weui-search-bar__form">
         <view class="weui-search-bar__box">
             <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-            <input type="text" class="weui-search-bar__input" placeholder="搜索" placeholder-class="plac" bindinput="inputTyping" />
+            <input type="text" class="weui-search-bar__input" placeholder="搜索" placeholder-class="plac" bindinput="searchInput" />
         </view>
     </view>
-    <view class="weui-search-bar__cancel-btn">搜索</view>
+    <view class="weui-search-bar__cancel-btn" bindtap="search">搜索</view>
 </view>
-<view class="search-tages">
-    <navigator>
-        <text>红米Note5</text>
-    </navigator>
-    <navigator>
-        <text>小米MIX2</text>
-    </navigator>
-    <navigator>
-        <text>小米MIX2S</text>
-    </navigator>
-    <navigator>
-        <text>小米笔记本Pro</text>
-    </navigator>
+<view class="search-list {{is_hidden?'hidden':''}}">
+    <block wx:for="{{search_list}}" wx:key="{{item.id}}">
+        <text class="search-item" bindtap="showItemDetail" data-header="{{item.header}}">{{item.header}}</text>
+    </block>
+</view>
+<template is="goods_list" data="{{goods_list}}"></template>
+<view wx:if="{{goods_list==''}}">
+    <view class="search-tages">
+        <navigator>
+            <text>红米Note5</text>
+        </navigator>
+        <navigator>
+            <text>小米MIX2</text>
+        </navigator>
+        <navigator>
+            <text>小米MIX2S</text>
+        </navigator>
+        <navigator>
+            <text>小米笔记本Pro</text>
+        </navigator>
+    </view>
 </view>

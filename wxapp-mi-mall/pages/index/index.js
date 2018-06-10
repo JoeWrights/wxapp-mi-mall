@@ -1,5 +1,7 @@
 //index.js
 //获取应用实例
+import showDetail from "../../modules/showDetail";
+import showcDetail from "../../modules/showcDetail";
 const app = getApp()
 
 Page({
@@ -46,8 +48,10 @@ Page({
       url: "../search/search"
     })
   },
-  showDetail(e){
-    const id=e.currentTarget.dataset.pid;
-    console.log(id);
-  }
+  // showDetail(e){
+  //   const id=e.currentTarget.dataset.pid;
+  //   console.log(id);
+  // }
+  showDetail,
+  showcDetail
 })
