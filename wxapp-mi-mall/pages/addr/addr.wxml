@@ -1,0 +1,32 @@
+<!--pages/addr/addr.wxml-->
+  <form bindsubmit="formSubmit">
+    <view class="block">
+      <view class="list_item">
+        <view class="title">收货人姓名:</view>
+        <view class="input">
+          <input type="text" name="receiverName" value="{{receiverName}}" disabled="{{isDisabled}}"/>
+        </view>
+      </view>
+      <view class="list_item">
+        <view class="title">联系电话:</view>
+        <view class="input">
+          <input type="text" name="mobile" value="{{mobile}}" disabled="{{isDisabled}}"/>
+        </view>
+      </view>
+      <view class="list_item">
+        <view class="title">详细地址:</view>
+        <view class="input">
+          <input type="text" name="addressDetail" value="{{addressDetail}}" disabled="{{isDisabled}}"/>
+        </view>
+      </view>
+      <view class="list_item">
+            <view class="title">邮政编码:</view>
+            <view class="input">
+              <input type="text" name="postCode" value="{{postCode}}" disabled="{{isDisabled}}"/>
+            </view>
+          </view>
+    </view>
+    <view class="btn_box">
+      <button class="button type_org {{isComplete?'':'btn_disabled'}}" formType="submit" bindtap="updateAddr">{{buttonTitle}}</button>
+    </view>
+  </form>
