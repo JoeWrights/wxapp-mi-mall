@@ -799,7 +799,7 @@ export default {
             header: "红米5",
             description: "千元全面屏",
             meta: "999元",
-            default:["4GB+32GB","黑",1,"899元"],
+            default:["4GB+32GB","黑",1,"999元"],
             attr_list:{
                 version:[
                     {name:"4GB+32GB",value:["4GB+32GB","999元"]},
@@ -843,7 +843,7 @@ export default {
                     slide_url:"https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/c214fed553480400b4b6600666907f40.jpg?thumb=1&w=720&h=792"
                 }
             ],
-            header: "红米自拍手机S2",
+            header: "红米S2",
             description: "1600万像素自拍手机",
             meta: "999元",
             default:["4GB+32GB","香槟金",1,"999元"],

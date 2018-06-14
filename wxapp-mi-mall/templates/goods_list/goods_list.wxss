@@ -55,6 +55,9 @@
     margin-left: 30rpx;
   }
   .goods-item .title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     font-size: 11pt;
   }
   .goods-item .desp{

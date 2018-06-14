@@ -6,7 +6,13 @@
         "pages/discovery/discovery",
         "pages/search/search",
         "pages/cart/cart",
-        "pages/mine/mine"
+        "pages/mine/mine",
+        "pages/channel/phone/phone",
+        "pages/channel/tv/tv",
+        "pages/channel/computer/computer",
+        "pages/goods/show",
+        "pages/selectGoods/selectGoods",
+        "pages/addr/addr"
     ],
     "window": {
         "backgroundTextStyle": "light",

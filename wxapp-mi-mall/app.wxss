@@ -1,8 +1,10 @@
 /**app.wxss**/
 @import "./lib/weui.wxss";
+
 page{
   background: #ebebeb;
   -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
 }
 .container {
   display: flex;
@@ -11,3 +13,9 @@ page{
   width: 100%; 
   box-sizing: border-box;
 } 
+/*隐藏滚动条*/
+::-webkit-scrollbar{    
+  height: 0;
+  width: 0;
+  color: transparent;
+}

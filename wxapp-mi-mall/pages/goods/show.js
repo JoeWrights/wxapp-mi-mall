@@ -10,8 +10,6 @@ Page({
     goods:[],
     selected:true,
     selected1:false,
-    // version:"",
-    // color:"",
     goods_num:"" 
   },
   selectBrief(e){
@@ -40,8 +38,6 @@ Page({
   },
   previewImage(e){
     const index=e.currentTarget.dataset.index;	//获取swiper里的图片的下标
-		// const slideName=e.currentTarget.dataset.slides;
-		// console.log(slideName);
 		const slide=this.data.goods.goods_slides; //获取商品轮播图
     const imgList=[]; //定义一个数组来存放轮播图的url
     // console.log(slide);
@@ -84,12 +80,8 @@ Page({
    */
   //把用户选好的商品规格从缓存拿出来
   onShow: function () {
-    // const version=wx.getStorageSync("version");
-    // const color=wx.getStorageSync("color");
     const goods_num=wx.getStorageSync('goods_sum');
     this.setData({
-      // version,
-      // color,
       goods_num
     });
   },
