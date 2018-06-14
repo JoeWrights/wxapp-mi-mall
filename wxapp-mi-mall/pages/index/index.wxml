@@ -4,7 +4,7 @@
 	<view class="section searchBar">
 		<view class="section searBar-box {{isTap?'tap':''}}">
 			<image src="../../assets/icons/search.png" mode="aspectFill" class="search-icon" />
-			<input type="button" name="searchBar" disabled="true" placeholder="搜索商品" placeholder-class="search-plac" bindtap="toSearch"
+			<input type="text" name="searchBar" disabled="true" placeholder="搜索商品" placeholder-class="search-plac" bindtap="toSearch"
 			/>
 		</view>
 	</view><!-- end-section search searchBar -->

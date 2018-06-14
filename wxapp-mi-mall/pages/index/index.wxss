@@ -156,6 +156,8 @@
 
 .goods-img.new:before{      /*新品标签样式*/
   position: absolute;
+  left: 0;
+  top: 0;
   width: 100rpx;
   height: 40rpx;
   line-height: 40rpx;

@@ -5,10 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    receiverName: "",
-    mobile: "",
-    addressDetail: "",
-    postCode: "",
+    receiverName: "张三",
+    mobile: "15770768970",
+    addressDetail: "上海市奉贤区",
+    postCode: "336600",
     isDisabled: false,
     isComplete: false,
     buttonTitle: "保存"
@@ -57,17 +57,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // let {receiverName,mobile,addressDetail,postCode}=addrInfo;
-    // wx.setStorageSync('addrInfo', {receiverName,mobile,addressDetail,postCode});
     let addrInfo=wx.getStorageSync("addrInfo");
     console.log(addrInfo);
     let {receiverName,mobile,addressDetail,postCode}=addrInfo;
-    // // console.log(username,phone,addr);
     this.setData({
-      receiverName,
-      mobile,
-      addressDetail,
-      postCode,
+      receiverName:receiverName||this.data.receiverName,
+      mobile:mobile||this.data.mobile,
+      addressDetail:addressDetail||this.data.addressDetail,
+      postCode:postCode||this.data.postCode,
       isDisabled: true,
       isComplete:true,
       buttonTitle: "修改"

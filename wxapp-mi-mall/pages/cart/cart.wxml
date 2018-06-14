@@ -9,9 +9,6 @@
     </view>
 </view>
 <view wx:else>
-    <!-- {{select_version}}
-    {{select_color}}
-    {{select_num}} -->
     <view class="cart-box">
         <view class="cart-list" wx:for="{{cart_list}}" wx:key="{{index}}">
             <view class="cart-item {{item.isTouchMove? 'touch-move-active': ''}}" bindtouchstart="touchstart" bindtouchmove="touchmove" data-index="{{index}}">
@@ -24,19 +21,8 @@
                     <text class="item-num">{{item.color}}</text>
                     <text class="item-price">{{item.select_num}}×</text>
                     <text class="item-price">{{item.price}}</text>
-                    <view class="del-cart-item" catchtap="delCartItem">删除</view>
+                    <view class="del-cart-item" catchtap="delCartItem" data-index="{{index}}">删除</view>
                 </view>
-                <!-- <view class="cart-content">
-                    <icon type="{{item.selected?'success':'circle'}}" class="" color="#ff6700" size="20" bindtap="selectList" data-index="{{index}}"
-                    />
-                    <image src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/850d316b25648c9862c7c22aefba9280.jpg?thumb=1&w=360&h=360"
-                        mode="aspectFill" />
-                    <text class="item-title">红米5A 2GB+16GB</text>
-                    <text class="item-num">红色</text>
-                    <text class="item-price">2×</text>
-                    <text class="item-price">599元</text>
-                    <view class="del">删除</view>
-                </view> -->
             </view>
         </view>
     </view>

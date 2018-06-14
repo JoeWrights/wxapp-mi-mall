@@ -7,18 +7,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // select_version:"",
-    // select_color:"",
-    // select_num:"",
     cart_list: [],
     totalPrice: 0,
     selectAllStatus: false,
     startX: 0, //开始坐标
-    startY: 0,
-    // receiverName: "",
-    // mobile: "",
-    // addressDetail: "",
-    // postCode: ""
+    startY: 0
   },
   goIndex() {
     wx.switchTab({
@@ -77,14 +70,6 @@ Page({
   },
 
   touchstart: function (e) {
-    //开始触摸时 重置所有删除
-    // this.data.cart_list.forEach(function (v, i) {
-    //     if (v.isTouchMove){
-    //       v.isTouchMove = false;
-    //     }
-    //     //只操作为true的
-
-    // })
     this.data.cart_list.map(item => {
       if (item.isTouchMove) {
         item.isTouchMove = false;
@@ -136,6 +121,7 @@ Page({
   },
   delCartItem(e) {
     const index=e.currentTarget.dataset.index;
+    console.log(index);
     this.data.cart_list.splice(index, 1);
     wx.clearStorageSync("select_num");
     this.setData({
@@ -160,13 +146,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // const isTouchMove=this.data.cart_list.map((item)=>{
-    //   return item.isTouchMove;
-    // })
-    // const select_color=wx.getStorageSync('color');
-    // const select_version=wx.getStorageSync('version');
-    // const select_num=wx.getStorageSync('select_num');
-    // const temp={version:select_version,color:select_color,num:select_num};
     const attr_item = wx.getStorageSync('attr_item');
     console.log(attr_item)
     // return

@@ -22,9 +22,6 @@ Page({
   searchInput(e){
     // console.log(e.detail.value);
     wx.setStorageSync('keywords',e.detail.value); //存入搜索关键字
-    // let search_list=app.globalData.phone.goods_list.filter(item=>{
-    //   return item.header.toString().toLowerCase().indexOf(e.detail.value)>-1;
-    // });
     let search_list=this.getList(e.detail.value);
     if(e.detail.value==""){
       search_list=[];
@@ -50,17 +47,6 @@ Page({
       });
       wx.hideLoading();
     },500);
-     
-   
-    // const goods_list=app.globalData.phone.goods_list.filter(item=>{
-    //   return item.header.toString().toLowerCase().indexOf(keywords)>-1;
-    // });
-    // const goods_list=this.getList(keywords);
-    // this.setData({
-    //   goods_list:this.getList(keywords),
-    //   is_hidden:true
-    // });
-    // console.log(goods_list);
   },
   showDetail,
   showItemDetail(e){
@@ -78,14 +64,6 @@ Page({
           is_hidden:true
         });
       },500)
-    //   let goods_list=app.globalData.phone.goods_list.filter(item=>{
-    //   return item.header.toString().toLowerCase().indexOf(header)>-1;
-    // });
-    // let goods_list=this.getList(header);
-    // this.setData({
-    //   goods_list:this.getList(header),
-    //   is_hidden:true
-    // });
   },
   getList(attr){
     return app.globalData.phone.goods_list.filter(item=>{

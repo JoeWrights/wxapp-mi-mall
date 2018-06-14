@@ -77,7 +77,8 @@ Page({
     wx.setStorageSync('select_num', select_num);
   },
   submit(e) {
-    const pre_item = wx.getStorageSync('attr_item')
+    const pre_item = wx.getStorageSync('attr_item');
+    console.log(pre_item);
     const temp = {
       'goods_name': wx.getStorageSync('goods_name'),
       'memory': wx.getStorageSync('memory'),
@@ -90,14 +91,6 @@ Page({
       'isTouchMove': false
     }
     wx.setStorageSync('attr_item', [temp, ...pre_item]);
-    // wx.showToast({
-    //   title: '已完成',
-    //   icon: 'success',
-    //   duration: 3000
-    // });
-    // wx.navigateBack({
-    //   url: "../goods/show"
-    // });
     wx.showToast({
       title: '已加入购物车',
       icon: 'success',
@@ -144,6 +137,10 @@ Page({
     const version = wx.getStorageSync('version')
     // this.getGoods(version)
     console.log(version)
+    wx.setStorageSync('select_num', this.data.select_num);
+    // wx.setStorageSync('color', this.data.color);
+    // wx.setStorageSync('memory', this.data.memory);
+    // wx.setStorageSync('price', this.data.price);
   },
 
   /**
